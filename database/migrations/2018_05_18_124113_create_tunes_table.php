@@ -15,6 +15,7 @@ class CreateTunesTable extends Migration
     {
         Schema::create('tunes', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('name');
             $table->integer('library_id')->unsigned();
             $table->foreign('library_id')->references('id')->on('libraries');
             $table->text('composer');
