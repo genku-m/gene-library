@@ -35,6 +35,6 @@ class CreateLibraliesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('libralies');
+        Schema::dropIfExists('libraries');
     }
 }

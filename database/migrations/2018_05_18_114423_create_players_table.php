@@ -15,9 +15,8 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('name');
             $table->text('instrument');
-            $table->integer('tune_id')->unsigned();
-            $table->foreign('tune_id')->references('id')->on('tunes');
             $table->timestamps();
         });
     }
