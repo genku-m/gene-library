@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTunePlyaersTable extends Migration
+class CreateTunePlayersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTunePlyaersTable extends Migration
      */
     public function up()
     {
-        Schema::create('tune_plyaers', function (Blueprint $table) {
+        Schema::create('tune_players', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('tune_id')->unsigned();
             $table->foreign('tune_id')->references('id')->on('tunes');
@@ -29,7 +29,7 @@ class CreateTunePlyaersTable extends Migration
      * @return void
      */
     public function down()
-    {   
-        Schema::dropIfExists('tune_plyaers');
+    {
+        Schema::dropIfExists('tune_players');
     }
 }
